@@ -1,6 +1,6 @@
 const int PIR_PIN    = 2;
 const int REED_PIN   = 3;
-const int LED_PIR    = 4;   // غيّره حسب توصيلك
+const int LED_PIR    = 4;
 const int BUZZER_PIN = 5;
 
 void setup() {
@@ -11,7 +11,7 @@ void setup() {
   pinMode(BUZZER_PIN, OUTPUT);
 
   Serial.println("PIR bysakhan... esta nna 30 sanya");
-  delay(30000);                     // وقت تسخين الـ PIR
+  delay(30000);                     
   Serial.println("Gahez!");
 }
 
@@ -19,10 +19,10 @@ void loop() {
   bool motion     = digitalRead(PIR_PIN) == HIGH;
   bool windowOpen = digitalRead(REED_PIN) == HIGH;
 
-  // الـ LED بيتحكم فيه الـ PIR
+ 
   digitalWrite(LED_PIR, motion ? HIGH : LOW);
 
-  // البازر بيرن لما الشباك يتفتح
+ 
   digitalWrite(BUZZER_PIN, windowOpen ? HIGH : LOW);
 
   Serial.print("Motion: ");
