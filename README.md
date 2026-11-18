@@ -58,7 +58,7 @@ It integrates mechanical, electrical, and computer systems on an Arduino Uno. It
 - **Servo:** add a 470 µF capacitor between +5 V and GND near the servo.
 
 ## Repository structure
-- `code/` Arduino sketch (`smart_home1032.ino`)
+- `code/` Arduino sketch (`smart_home.ino`)
 - `cad/` DXF files for the laser-cut MDF cottage (3 mm)
 - `docs/` report represent wiring and mounting plan, BOM, flow charts
 - `media/` previews and demo video
@@ -77,7 +77,7 @@ Laser-cut MDF (3 mm) cottage with a tiled gable roof and a basement for the elec
 ## Getting started
 
 1. Wire the circuit and test each part with the sketches in `1_component_tests.txt`.
-2. Open `smart_home1032.ino` in the Arduino IDE.
+2. Open `smart_home.ino` in the Arduino IDE.
 3. Check the I2C addresses with the I2C scanner test (LCD `0x27`/`0x3F`, PCF8574 `0x20`).
 4. Upload and open Serial Monitor at **9600** for diagnostics (security, PIR, window, LDR, temperature, humidity, fan).
 
